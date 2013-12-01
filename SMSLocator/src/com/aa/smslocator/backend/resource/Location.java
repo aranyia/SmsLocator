@@ -1,8 +1,12 @@
 package com.aa.smslocator.backend.resource;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Location {
+import com.googlecode.objectify.annotation.Embed;
+
+public class Location implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private float accuracy;
 	private double longitude, latitude;
 	private Date time;

@@ -16,7 +16,7 @@ import com.google.api.server.spi.config.Named;
 	defaultVersion = AnnotationBoolean.TRUE,
 	clientIds = {com.google.api.server.spi.Constant.API_EXPLORER_CLIENT_ID}
 )
-public class SmsEndpoint {
+public class SmsProcessor {
 	
 	@ApiMethod(name = "sms.save", httpMethod = HttpMethod.POST)
 	public ApiResponse saveSms(SmsResource smsResource) {

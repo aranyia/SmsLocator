@@ -10,7 +10,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
 	    <init-param>
 	        <param-name>services</param-name>
-	        <param-value><var>com.aa.smslocator.backend.api.SmsEndpoint</var></param-value>
+	        <param-value>com.aa.smslocator.backend.api.SmsProcessor</param-value>
 	    </init-param>
 	</servlet>
 	<servlet-mapping>
