@@ -33,7 +33,8 @@ public class SmsDataStore {
 	public static List<SmsResource> listReceiverSms(String receiver) {
 		final LoadType<SmsEntity> loadSms = ofy().load().type(SmsEntity.class);
 		
-		final List<SmsEntity> smsEntities = loadSms.filter(SMS_FIELD_RECEIVER, receiver).list();
+		final List<SmsEntity> smsEntities = loadSms.filter(SMS_FIELD_RECEIVER, receiver)
+												   .order("-time").list();
 		final List<SmsResource> smsList = new ArrayList<SmsResource>(smsEntities.size());
 		
 		for(SmsEntity smsEntity : smsEntities) {
