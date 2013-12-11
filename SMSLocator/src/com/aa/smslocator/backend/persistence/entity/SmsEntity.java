@@ -48,7 +48,7 @@ public class SmsEntity extends DataEntity {
 	}
 
 	private SmsMessage getMessageResource() {
-		return new SmsMessage(message, source, receiver, time);
+		return new SmsMessage(source, receiver, message, time);
 	}
 
 	public static SmsEntity wrap(SmsResource smsRes) {
